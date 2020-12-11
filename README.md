@@ -10,6 +10,8 @@ This API is based on a paper written by CHRISTOPHER J. STRUCK titled [Group Dela
 
 ## Group Delay Process
 
+The following example was generated using [GroupDelay_OFDM](https://github.com/mgarcia01752/GroupDelay/blob/main/src/com/mgarcia01752/groupdelay/main/GroupDelay_OFDM.java)
+
 ### Convert IQ or Complex to Radians "Remember your highSchool trigonometry class"
 
 [Get Phase/Radian from Complex Number Howto](https://mathworld.wolfram.com/ComplexNumber.html)
