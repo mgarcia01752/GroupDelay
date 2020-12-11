@@ -27,33 +27,18 @@ import java.util.List;
 public class GroupDelay {
 	
 	private List<IQComplexSample> lcs = new ArrayList<>();
-
-	public GroupDelay() {}
 	
+	/**
+	 * 
+	 * @param lcs IQComplexSample
+	 */
 	public GroupDelay(List<IQComplexSample> lcs) {
 		this.lcs = lcs;
 	}
-		
+			
 	/**
-	 * 
-	 * @param iSampleCenterFrequency
-	 * @param c
-	 * @return false if input sample frequency is equal or lower than the last entered sample
+	 * @return Return of UnWrapped radians from the IQComplexSample List
 	 */
-	public boolean add(IQComplexSample cs) {
-		
-		boolean bStatus = true;
-		
-		this.lcs.add(cs);
-		
-		if (!this.lcs.isEmpty()) {
-			
-			
-		}
-		
-		return bStatus;
-	}
-	
 	public List<Double> getPhaseUnWrappingList() {
 		
 		List<Double> ldUnWrapped = new ArrayList<>();
@@ -84,6 +69,11 @@ public class GroupDelay {
 		
 	}
 	
+	/**
+	 * 
+	 * @param ldPhaseUnWrapping List of Unwrapped Radians
+	 * @return List of each GroupDelayEntry by Frequency
+	 */
 	public List<GroupDelayEntry> getGroupDelayList(List<Double> ldPhaseUnWrapping) {
 		
 		List<GroupDelayEntry> lgde = new ArrayList<>();
