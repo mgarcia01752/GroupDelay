@@ -62,8 +62,8 @@ public class GroupDelay_OFDM {
 				if (!tempArr[0].matches("\\d+")) continue;
 
 				lcs.add(new IQComplexSample(	Integer.parseInt(tempArr[0]),
-												Double.parseDouble(tempArr[1]),
-												Double.parseDouble(tempArr[2])));
+								Double.parseDouble(tempArr[1]),
+								Double.parseDouble(tempArr[2])));
 
 				if (debug) {
 					
