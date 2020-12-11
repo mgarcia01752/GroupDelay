@@ -28,18 +28,18 @@ public class IQComplexSample extends Complex {
 	/**
 	 * 
 	 * @param iSamplefreqHertz Center Frequency of Sample
-	 * @param real Real or Q (quadrature) component of Complex
-	 * @param imag Imaginary or I (in-phase) component of Complex
+	 * @param real Real or I (in-phase) component of Complex
+	 * @param imag Imaginary or Q (quadrature) component of Complex
 	 */
-	public IQComplexSample(int iSamplefreqHertz, double dReal, double dImag) {
-		super(dReal, dImag);
+	public IQComplexSample(int iSamplefreqHertz, double dReal_I, double dImag_Q) {
+		super(dReal_I, dImag_Q);
 		this.iSamplefreqHertz = iSamplefreqHertz;
 	}
 	
 	/**
 	 * 
 	 * @param iSamplefreqHertz Center Frequency of Sample
-	 * @param Complex containing both real Real or Q (quadrature) components
+	 * @param Complex containing both real Real(I) or Imaginary(Q) components
 	 */
 	public IQComplexSample(int iSamplefreqHertz, Complex c) {
 		super(c.re(),c.im());

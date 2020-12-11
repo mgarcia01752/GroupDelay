@@ -15,11 +15,11 @@ public class Example_1 {
 		List<IQComplexSample> liqcs = new ArrayList<>();
 		
 		/*
-		 * Group Delay Calculation for 200KHz of Bandwidth
-		 * 
-			FREQ		REAL(Q)			Imaginary(I)
+		 	Group Delay Calculation for 200KHz of Bandwidth
+		  
+			FREQ		REAL(I)			Imaginary(Q)
 			729700000	-1.050292969	0.223144531
-			729750000	-0.984375		0.439697266
+			729750000	-0.984375	0.439697266
 			729800000	-0.874755859	0.635986328
 			729850000	-0.726806641	0.806274414
 		*/
@@ -32,14 +32,20 @@ public class Example_1 {
 		//Create GroupDelay Object using IQComplexSample List
 		GroupDelay gd = new GroupDelay(liqcs);
 		
-		//Unwrap the phase
+		//Unwrap the phase data
 		List<Double> ld = gd.getPhaseUnWrappingList();
 		
-		//Calculate Group Delay - Data return will always be n-1 entries in seconds
+		//Calculate Group Delay with unwrapped phase data
+		//Data return will always be n-1 entries in seconds
 		for (GroupDelayEntry gde :gd.getGroupDelayList(ld)) {
 			System.out.println(gde.toString());
 		}
 		
+		/*
+		 	Frequency(hertz): 729750000 - GroupDelay(seconds): 0.000000670807
+			Frequency(hertz): 729800000 - GroupDelay(seconds): 0.000000663868
+			Frequency(hertz): 729850000 - GroupDelay(seconds): 0.000000663804
+		 */
 		
 	}
 	

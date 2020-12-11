@@ -11,7 +11,7 @@ This API is based on a paper written by CHRISTOPHER J. STRUCK titled [Group Dela
 Create a list of IQ or Complex samples that MUST include the Center Frequency to properly calcualte the group delay.
 
 
-[Code Example 1]()
+[Code Example 1](https://github.com/mgarcia01752/GroupDelay/blob/main/src/com/mgarcia01752/groupdelay/example/Example_1.java)
 
 **Input Values**
 
