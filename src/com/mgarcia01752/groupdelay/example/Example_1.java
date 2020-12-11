@@ -39,7 +39,7 @@ public class Example_1 {
 		/*
 		 	Group Delay Calculation for 200KHz of Bandwidth
 		  
-			FREQ		REAL(I)			Imaginary(Q)
+			FREQ		REAL(I)		Imaginary(Q)
 			729700000	-1.050292969	0.223144531
 			729750000	-0.984375	0.439697266
 			729800000	-0.874755859	0.635986328
