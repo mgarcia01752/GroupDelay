@@ -2,7 +2,7 @@
 
 **Purpose**
 
-As coax or wired systems are aging and have not been updated, operators are continuously increasing their data rates by both increasing the QAM order and/or widening channel bandwidth using OFDM. One of the considerations is placing an OFDM near a cable roll-off. The immediate effect is a lowering of attenuation, which can result in a lower signal-to-noise (SNR) or MER. Addtionally, there is also a secondary effect called the Group Delay (GD) of the signal.
+As coax or wired systems are aging and have not been updated, operators are continuously increasing their data rates by both increasing the QAM order and/or widening channel bandwidth using OFDM. One of the considerations is placing an OFDM near a cable roll-off. The immediate effect is a lowering of attenuation, which can result in a lower signal-to-noise (SNR) or MER. Additionally, there is also a secondary effect called the Group Delay (GD) of the signal.
 
 At the time I wrote this API it was used to take the OFDM/OFDMA channel estimation and derive the GD which is based on the OFDM probe pilot data. Since OFDM/OFDMA is a common transport protocol using in WIFI, DOCSIS, MoCA, Home Plug, and others, this API is generic enough to be used for calculating GD for an OFDM signal.  
 
@@ -11,6 +11,8 @@ This API is based on a paper written by CHRISTOPHER J. STRUCK titled [Group Dela
 ## Group Delay Process
 
 ### Convert IQ or Complex to Radians "Remember your highSchool trigonometry class"
+
+[Get Phase/Radian from Complex Number Howto](https://mathworld.wolfram.com/ComplexNumber.html)
 
 ### Unwrap Phase Information
 
