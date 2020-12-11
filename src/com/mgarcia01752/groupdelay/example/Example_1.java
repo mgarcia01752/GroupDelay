@@ -63,7 +63,9 @@ public class Example_1 {
 			System.out.println(gde.toString());
 		}
 		
-		/*
+		/*	
+		 	Group Delay Results in Seconds
+		 
 		 	Frequency(hertz): 729750000 - GroupDelay(seconds): 0.000000670807
 			Frequency(hertz): 729800000 - GroupDelay(seconds): 0.000000663868
 			Frequency(hertz): 729850000 - GroupDelay(seconds): 0.000000663804

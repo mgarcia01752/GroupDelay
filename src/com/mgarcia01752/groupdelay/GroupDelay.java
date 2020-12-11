@@ -90,6 +90,29 @@ public class GroupDelay {
 		
 	}
 	
+	/**
+	 * 
+	 * @param dPhase_N1 double n+1 radian data point
+	 * @param dPhase_N	double n radian data point
+	 * @return double unwrapped phase/radian sample
+	 * 
+	 * @apiNote 
+	 * 
+	 * Unlike some places I have worked, I do my best to pass the credit along
+	 * 
+	 * Source: http://www.cjs-labs.com/sitebuildercontent/sitebuilderfiles/GroupDelay.pdf
+	 * 
+	 * Phase unwrapping can be done as follows:
+			While
+			 (Phase(n) - Phase(n-1))< -180)
+			Do
+			 Phase(n) = Phase(n) + 360;
+			While
+			 (Phase(n) - Phase(n-1)) > 180)
+			 Do
+			 Phase(n)= Phase(n) - 360; 
+	 * 
+	 */
 	private double phaseUnwrapping(double dPhase_N1, double dPhase_N) {
 
 		while ((dPhase_N - dPhase_N1) <= -(Math.PI)) {
@@ -111,7 +134,14 @@ public class GroupDelay {
 	 * @param iFreq_N Frequency n
 	 * @return double Group Delay
 	 * 
-	 * @apiNote GroupDelay(n)=-1*[((ph(n+1)-ph(n-1))/(f(n+1)-f(n-1))]/(360) 
+	 * @apiNote 
+	 * 
+	 * 	Unlike some places I have worked, I do my best to pass the credit along
+	 * 	
+	 * 	Source: http://www.cjs-labs.com/sitebuildercontent/sitebuilderfiles/GroupDelay.pdf
+	 * 
+	 * 		GroupDelay(n)=-1*[((ph(n+1)-ph(n-1))/(f(n+1)-f(n-1))]/(360)
+	 *  
 	 */
 	private double getGroupDelay(double dPhase_N1 , double dPhase_N, int iFreq_N1, int iFreq_N ) {
 		double dFreqDelta = ((double) iFreq_N - (double) iFreq_N1);
