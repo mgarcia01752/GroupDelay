@@ -14,15 +14,17 @@ This API is based on a paper written by CHRISTOPHER J. STRUCK titled [Group Dela
 
 ### Unwrap Phase Information
 
-**Before**
+**Wrapped Radians/Phase**
 
-![alt text](image.jpg)
+![alt text](https://github.com/mgarcia01752/GroupDelay/blob/main/images/WrappedRadian.JPG)
 
-**After**
+**Unwrapped Radians/Phase**
 
-![alt text](image.jpg)
+![alt text](https://github.com/mgarcia01752/GroupDelay/blob/main/images/UnWrappedRadian.JPG)
 
 ### Calculate Group Delay
+
+![alt text](https://github.com/mgarcia01752/GroupDelay/blob/main/images/OFDM-GD-82MHz.JPG)
 
 ## API Usage
 
