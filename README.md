@@ -2,13 +2,31 @@
 
 **Purpose**
 
-As coax systems are aging and have not been updated, cable operators are continuously increasing their data rates by both increasing QAM order and widening channel bandwidth using OFDM. One of the considerations is placing an OFDM near a cable roll-off. the immediate effect is a lowering of attenuation, which can result in a lower signal-to-noise (SNR) or MER. There is also a secondary effect is the Group Delay of the signal.  
+As coax or wired systems are aging and have not been updated, operators are continuously increasing their data rates by both increasing the QAM order and/or widening channel bandwidth using OFDM. One of the considerations is placing an OFDM near a cable roll-off. The immediate effect is a lowering of attenuation, which can result in a lower signal-to-noise (SNR) or MER. Addtionally, there is also a secondary effect called the Group Delay (GD) of the signal.
+
+At the time I wrote this API it was used to take the OFDM/OFDMA channel estimation and derive the GD which is based on the OFDM probe pilot data. Since OFDM/OFDMA is a common transport protocol using in WIFI, DOCSIS, MoCA, Home Plug, and others, this API is generic enough to be used for calculating GD for an OFDM signal.  
 
 This API is based on a paper written by CHRISTOPHER J. STRUCK titled [Group Delay](http://www.cjs-labs.com/sitebuildercontent/sitebuilderfiles/GroupDelay.pdf)
 
-**API Usage**
+## Group Delay Process
 
-Create a list of IQ or Complex samples that MUST include the Center Frequency to properly calcualte the group delay.
+### Convert IQ or Complex to Radians "Remember your highSchool trigonometry class"
+
+### Unwrap Phase Information
+
+**Before**
+
+![alt text](image.jpg)
+
+**After**
+
+![alt text](image.jpg)
+
+### Calculate Group Delay
+
+## API Usage
+
+Create a list of IQ or Complex samples that MUST include the Center Frequency to properly calculate the group delay.
 
 
 [Code Example 1](https://github.com/mgarcia01752/GroupDelay/blob/main/src/com/mgarcia01752/groupdelay/example/Example_1.java)
@@ -28,4 +46,3 @@ Create a list of IQ or Complex samples that MUST include the Center Frequency to
 	Frequency(hertz): 729750000 - GroupDelay(seconds): 0.000000670807
 	Frequency(hertz): 729800000 - GroupDelay(seconds): 0.000000663868
 	Frequency(hertz): 729850000 - GroupDelay(seconds): 0.000000663804
-

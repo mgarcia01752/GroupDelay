@@ -44,7 +44,7 @@ public class GroupDelay_OFDM {
 
 		try {
 
-			File file = new File(sBasePath() + File.separator + csvFile);
+			File file = new File(sBasePath() + File.separator + "testfiles" + File.separator + csvFile);
 
 			FileReader fr = new FileReader(file);
 
@@ -103,10 +103,10 @@ public class GroupDelay_OFDM {
 	public static void main(String[] args) {
 
 		//Open Test File Example
-		GroupDelay gd = new GroupDelay(read("ChanEst-1607667481361.csv"));
+		GroupDelay gd = new GroupDelay(read("OFDM_CHAN_ESTIMATION.csv"));
 		
 		List<Double> ld = gd.getPhaseUnWrappingList();
-		
+				
 		for (GroupDelayEntry gde :gd.getGroupDelayList(ld)) {
 			System.out.println(gde.toString());
 		}
