@@ -82,7 +82,6 @@ public class GroupDelay_OFDM {
 		}
 
 		return lcs;
-
 	}
 
 	public static String sBasePath() {
@@ -109,9 +108,6 @@ public class GroupDelay_OFDM {
 				
 		for (GroupDelayEntry gde :gd.getGroupDelayList(ld)) {
 			System.out.println(gde.toString());
-		}
-		
-		
+		}	
 	}
-
 }
