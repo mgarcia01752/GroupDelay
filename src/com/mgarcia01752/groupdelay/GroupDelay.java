@@ -45,7 +45,7 @@ public class GroupDelay {
 	
 		/* Step 1 - Get Initial UnWrapped phase Value */
 		ldUnWrapped.add(phaseUnwrapping(lcs.get(1).phase(),   //n
-										lcs.get(0).phase())); //n-1
+						lcs.get(0).phase())); //n-1
 		
 		/* Start Index -> n + 1*/
 		for (int iN = 1; iN < lcs.size(); iN++) {
@@ -54,10 +54,10 @@ public class GroupDelay {
 			double dUnWrapPhase = lcs.get(iN).phase();
 			double dWrapPhase = dUnWrapPhase;
 			
-							/* n - (n-1) */
-			double dN = dWrapPhase; 				// n
+					/* n - (n-1) */
+			double dN = dWrapPhase; 		// n
 			double dN_1 = ldUnWrapped.get(iN -1);	// n-1
-							/* n - (n-1) */
+					/* n - (n-1) */
 			
 			dUnWrapPhase = phaseUnwrapping(dN_1,dN);
 
@@ -65,8 +65,7 @@ public class GroupDelay {
 
 		}
 	
-		return ldUnWrapped;
-		
+		return ldUnWrapped;		
 	}
 	
 	/**
@@ -80,14 +79,13 @@ public class GroupDelay {
 		
 		for (int idx = 0; idx < ldPhaseUnWrapping.size()-1; idx++) {
 			lgde.add(new GroupDelayEntry(	this.lcs.get(idx+1).getSampleFrequency(), 
-											getGroupDelay(	ldPhaseUnWrapping.get(idx+1),
-															ldPhaseUnWrapping.get(idx),
-															this.lcs.get(idx+1).getSampleFrequency(),
-															this.lcs.get(idx).getSampleFrequency())));
+							getGroupDelay(	ldPhaseUnWrapping.get(idx+1),
+							ldPhaseUnWrapping.get(idx),
+							this.lcs.get(idx+1).getSampleFrequency(),
+							this.lcs.get(idx).getSampleFrequency())));
 		}
 		
-		return lgde;
-		
+		return lgde;		
 	}
 	
 	/**
@@ -149,7 +147,4 @@ public class GroupDelay {
 		double dGroupDelay = -(dOmega / (dFreqDelta * 2 * Math.PI));
 		return dGroupDelay;		
 	}
-	
-
-		
 }
